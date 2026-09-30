@@ -473,7 +473,7 @@ Table~\ref{tab:neg} lists the variants that did not help. Two patterns stand out
 A two-model 3D U-Net ensemble with signal-weighted masked-reconstruction pretraining, trained on a laptop GPU with a recipe selected on unseen structure families, reached Dice 0.653 and clDice 0.738 on contiguous structures and Dice 0.547 and PQ 0.360 on isolated structures in the SELMA3D 2026 final test. The lessons generalise beyond this challenge: validate on structure types the model has not seen, monitor how much a model segments on them, and treat late-training degradation on new types as a calibration problem that can be corrected per volume without labels.
 
 \section*{Data and code availability}
-All data are the SELMA3D 2026 challenge data \cite{data2110,data2106,data3281,data3277}, released under CC~BY~4.0. Training and inference code, the container recipe and the analysis scripts will be made available by the authors [repository link to be added].
+All data are the SELMA3D 2026 challenge data \cite{data2110,data2106,data3281,data3277}, released under CC~BY~4.0. Training and inference code, the container recipe and the analysis scripts are available at Rl{https://github.com/ayushcoder894/selma3d-2026-validating-for-the-unseen}.
 
 \clearpage
 \bibliographystyle{unsrtnat}
