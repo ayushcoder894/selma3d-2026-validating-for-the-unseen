@@ -1,0 +1,9 @@
+# Training / analysis environment (tested with Python 3.11).
+# Install the PyTorch build that matches your CUDA version first: https://pytorch.org
+torch>=2.2          # tested: 2.7.1+cu118 (laptop), 2.x (A100 server); container uses 2.9.1
+monai==1.5.0
+numpy               # tested 2.3.5; with older torch builds use "numpy<2"
+scipy               # tested 1.16.2
+scikit-image        # tested 0.25.2
+SimpleITK==2.5.2
+matplotlib          # figures only

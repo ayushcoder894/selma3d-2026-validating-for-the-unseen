@@ -1,0 +1,14 @@
+{
+ "note": "9 fold-0 volumes held out of the final run; v8 never trained on fold 0, so v8 and v11 are compared on the same unseen volumes",
+ "stems": [
+  "AD_plaques_patchvolume_000",
+  "AD_plaques_patchvolume_004",
+  "AD_plaques_patchvolume_016",
+  "cell_nuclei_patchvolume_002",
+  "cfos_neuron_patchvolume_753",
+  "blood_vessel_patchvolume_003",
+  "blood_vessel_patchvolume_011",
+  "peripheral_nerve_patchvolume_1369",
+  "Human_NEFH_transition_raw"
+ ]
+}

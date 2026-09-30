@@ -1,0 +1,32 @@
+{
+ "note": "leave-family-out: cfos_neuron and peripheral_nerve never trained on; stems = monitored subset",
+ "stems": [
+  "cfos_neuron_patchvolume_1008",
+  "cfos_neuron_patchvolume_1058",
+  "cfos_neuron_patchvolume_1147",
+  "peripheral_nerve_patchvolume_814",
+  "peripheral_nerve_patchvolume_158"
+ ],
+ "exclude": [
+  "cfos_neuron_patchvolume_1216",
+  "cfos_neuron_patchvolume_1235",
+  "cfos_neuron_patchvolume_1460",
+  "cfos_neuron_patchvolume_695",
+  "cfos_neuron_patchvolume_753",
+  "cfos_neuron_patchvolume_969",
+  "peripheral_nerve_patchvolume_808",
+  "peripheral_nerve_patchvolume_1368",
+  "peripheral_nerve_patchvolume_227",
+  "peripheral_nerve_patchvolume_785",
+  "peripheral_nerve_patchvolume_1475",
+  "peripheral_nerve_patchvolume_367",
+  "peripheral_nerve_patchvolume_792",
+  "peripheral_nerve_patchvolume_395",
+  "peripheral_nerve_patchvolume_310",
+  "peripheral_nerve_patchvolume_1369",
+  "peripheral_nerve_patchvolume_366",
+  "peripheral_nerve_patchvolume_289",
+  "peripheral_nerve_patchvolume_303",
+  "peripheral_nerve_patchvolume_387"
+ ]
+}

@@ -1,0 +1,23 @@
+# data, runs and weights stay out of git (weights are attached to the GitHub release)
+data/*
+!data/_filelists/
+runs/
+weights/
+*.pt
+*.pth
+*.tar.gz
+submission/test/
+submission/resources/*.pt
+submission/resources/cont/
+
+# Python / Node / LaTeX build artefacts
+__pycache__/
+*.pyc
+node_modules/
+package-lock.json
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/main.pdf
