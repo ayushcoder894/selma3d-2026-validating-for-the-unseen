@@ -20,6 +20,15 @@ types that have **no annotated example**. Our solution:
    with two 128³ experts, and the threshold is set per volume so the result contains as much foreground as v15
    (*foreground anchoring*).
 
+## Final leaderboard
+
+| Task | Entry | Final place | Mean position | Per-metric positions (isolated Dice / isolated PQ / contiguous Dice / contiguous clDice) |
+|---|---|---|---|---|
+| Task 2 — with SSL (open data) | v15 | **2nd** (tied) | 2.5 | — |
+| Task 1 — with SSL (fixed data) | Routed + anchored | **5th** | 4.3 | 6 / 7 / 2 / 2 |
+
+Final test phase of the SELMA3D 2026 challenge; entries are ranked by the mean of their positions over the four metrics.
+
 ## Results (mean ± s.d. over test volumes)
 
 | Phase | Entry | isolated Dice | isolated PQ | contiguous Dice | contiguous clDice |
