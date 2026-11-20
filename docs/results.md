@@ -7,13 +7,13 @@ Metrics are mean ± s.d. over test volumes (isolated: Dice, panoptic quality; co
 | Entry | isolated Dice | isolated PQ | contiguous Dice | contiguous clDice |
 |---|---|---|---|---|
 | Routed + anchored (Task 1) | 0.5474 ± 0.2620 | 0.3604 ± 0.2424 | 0.6529 ± 0.1550 | 0.7380 ± 0.1522 |
-| v15 (Task 2) | 0.5474 ± 0.2620 | 0.3604 ± 0.2424 | 0.6528 ± 0.1547 | 0.7372 ± 0.1529 |
+| v15 (reference) | 0.5474 ± 0.2620 | 0.3604 ± 0.2424 | 0.6528 ± 0.1547 | 0.7372 ± 0.1529 |
 
 ## Preliminary test (26 volumes)
 
 | Entry | isolated Dice | isolated PQ | contiguous Dice | contiguous clDice | mean |
 |---|---|---|---|---|---|
-| v15 (Task 2) | 0.6287 ± 0.1604 | 0.4534 ± 0.1873 | 0.6332 ± 0.1296 | 0.7473 ± 0.0721 | 0.616 |
+| v15 (reference) | 0.6287 ± 0.1604 | 0.4534 ± 0.1873 | 0.6332 ± 0.1296 | 0.7473 ± 0.0721 | 0.616 |
 | Routed + anchored (Task 1) | 0.6287 ± 0.1604 | 0.4534 ± 0.1873 | 0.6258 ± 0.1283 | 0.7300 ± 0.0740 | 0.610 |
 
 Development history on the preliminary test: v11 (percentile normalisation, AdamW) 0.537; v15 (recipe E + SSL) 0.616;

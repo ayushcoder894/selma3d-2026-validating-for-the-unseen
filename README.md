@@ -15,7 +15,7 @@ types that have **no annotated example**. Our solution:
    loss and half of the crops are centred on signal, so the network does not just learn to reproduce background.
 2. **Recipe E** fine-tuning of a residual 3D U-Net (MONAI DynUNet, 16.7 M parameters), selected on a
    **leave-family-out proxy** (train without c-Fos cells and peripheral nerves, score exactly those).
-3. **v15**: a two-model 96³ ensemble (v15a, v15b) — our Task 2 entry.
+3. **v15**: a two-model 96³ ensemble (v15a, v15b) (the base model; reference only).
 4. **Routed + anchored** (Task 1 entry): a morphology router sends contiguous-looking volumes to a 50/50 blend of v15
    with two 128³ experts, and the threshold is set per volume so the result contains as much foreground as v15
    (*foreground anchoring*).
@@ -24,18 +24,19 @@ types that have **no annotated example**. Our solution:
 
 | Task | Entry | Final place | Mean position | Per-metric positions (isolated Dice / isolated PQ / contiguous Dice / contiguous clDice) |
 |---|---|---|---|---|
-| Task 2 — with SSL (open data) | v15 | **2nd** (tied) | 2.5 | — |
 | Task 1 — with SSL (fixed data) | Routed + anchored | **5th** | 4.3 | 6 / 7 / 2 / 2 |
 
 Final test phase of the SELMA3D 2026 challenge; entries are ranked by the mean of their positions over the four metrics.
+Our Task 2 (open-data) entry used the same pretraining data as Task 1 and therefore did not meet the Task 2
+requirements; it is not counted as a Task 2 result. The v15 rows below are reported as a reference model only.
 
 ## Results (mean ± s.d. over test volumes)
 
 | Phase | Entry | isolated Dice | isolated PQ | contiguous Dice | contiguous clDice |
 |---|---|---|---|---|---|
-| Final test | v15 (Task 2) | 0.547 ± 0.262 | 0.360 ± 0.242 | 0.653 ± 0.155 | 0.737 ± 0.153 |
+| Final test | v15 (reference) | 0.547 ± 0.262 | 0.360 ± 0.242 | 0.653 ± 0.155 | 0.737 ± 0.153 |
 | Final test | Routed + anchored (Task 1) | 0.547 ± 0.262 | 0.360 ± 0.242 | 0.653 ± 0.155 | 0.738 ± 0.152 |
-| Preliminary test (26 volumes) | v15 (Task 2) | 0.629 ± 0.160 | 0.453 ± 0.187 | 0.633 ± 0.130 | 0.747 ± 0.072 |
+| Preliminary test (26 volumes) | v15 (reference) | 0.629 ± 0.160 | 0.453 ± 0.187 | 0.633 ± 0.130 | 0.747 ± 0.072 |
 | Preliminary test (26 volumes) | Routed + anchored (Task 1) | 0.629 ± 0.160 | 0.453 ± 0.187 | 0.626 ± 0.128 | 0.730 ± 0.074 |
 
 Isolated predictions of the two entries are identical by construction; routing changes contiguous volumes only.
@@ -88,7 +89,7 @@ The container needs Docker with GPU support; it is based on `pytorch/pytorch:2.9
 Download `v15a.pt`, `v15b.pt`, `B128_all1.pt`, `B128_all2.pt` from the repository's release into `weights/`, then:
 
 ```bash
-bash scripts/build_container.sh v15    weights/v15a.pt weights/v15b.pt                                  # Task 2 entry
+bash scripts/build_container.sh v15    weights/v15a.pt weights/v15b.pt                                  # v15 reference model
 bash scripts/build_container.sh routed weights/v15a.pt weights/v15b.pt -- weights/B128_all1.pt weights/B128_all2.pt  # Task 1 entry
 ```
 
